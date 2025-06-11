@@ -9,13 +9,14 @@ def execute(filters=None):
 	fiscal = frappe.get_doc("Fiscal Year",filters.get("fiscal_year"))
 	
 	value = ""
-	if filters.get("value_quantity") == "QuantityWscheme":
-		value = "and  sii.item_code NOT LIKE '%Scheme%'"
+	if filters.get("value_quantity") == "QuantityWschm":
+		value = "and  sii.item_code NOT LIKE '%Schm%'"
 		
 
 	data = frappe.db.sql(f""" SELECT 
 							sii.item_code, 
 							sii.item_name,
+					  		sii.item_group,
 							sum(sii.stock_qty) as qty, 
 							Sum(sii.stock_qty * sii.weight_per_unit) AS weight_per_unit, 
 							si.customer as customer,
@@ -74,6 +75,12 @@ def execute(filters=None):
 			"fieldtype": "Data",
 			"width":  130
 		},	
+		{
+			"fieldname": "item_group",
+			"label": "<b>Item Group</b>",
+			"fieldtype": "Data",
+			"width":  130
+		}
 
 	]
 	for i in dd[0]:

@@ -36,8 +36,8 @@ frappe.query_reports["Custom Sales invoice (Customer)"] = {
 			"label": __("Value Or Qty"),
 			"fieldtype": "Select",
 			"options": [
-				{ "value": "Quantity", "label": __("Quantity (Kg Sold) - with scheme") },
-				{ "value": "QuantityWscheme", "label": __("Quantity (Kg Sold) - without scheme") },
+				{ "value": "Quantity", "label": __("Quantity (Kg Sold) - with schm") },
+				{ "value": "QuantityWschm", "label": __("Quantity (Kg Sold) - without schm") },
 			],
 			"default": "Quantity",
 			"reqd": 1

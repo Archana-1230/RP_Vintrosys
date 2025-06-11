@@ -19,7 +19,7 @@ def execute(filters=None):
 							se.name as parent,
 							se.stock_entry_type,
 							se.posting_date,
-							se.issued_to
+							se.custom_issued_to
 							
 							from 
 							`tabStock Entry Detail` sei
@@ -48,7 +48,7 @@ def execute(filters=None):
 			"width":  150
 		},
 		{
-			"fieldname": "issued_to",
+			"fieldname": "custom_issued_to",
 			"label": "<b>Issued to</b>",
 			"fieldtype": "Data",
 			"width":  170
