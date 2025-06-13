@@ -19,13 +19,13 @@ def execute(filters=None):
 				"label": _("Item Name"),
 				"fieldname": "item_name",
 				"fieldtype": "Data",
-				"width": 150,
+				"width": 300,
 			},
 			{
 				"label": _("Stock UOM"),
 				"fieldname": "stock_uom",
 				"fieldtype": "Data",
-				"width": 150,
+				"width": 110,
 			},
 			{
 				"label": _("Warehouse"),
