@@ -58,7 +58,7 @@ def execute(filters=None):
 		INNER JOIN
 			`tabItem` item ON bin.item_code = item.item_code
 		WHERE
-			item.safety_stock IS NOT NULL and bin.warehouse = "Finished Goods - RP"
+			item.safety_stock IS NOT NULL and bin.actual_qty Is NOT NULL and bin.warehouse = "Finished Goods - RP"
 	""", as_dict=True)
 
 	for row in items:
