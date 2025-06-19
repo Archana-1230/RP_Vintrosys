@@ -9,10 +9,14 @@ def execute(filters=None):
 	data = []
 	columns = [
 			{
+				"label": _("Warehouse"),
+				"fieldname": "warehouse",
+				"fieldtype": "Data",
+				"width": 200,
+			},{
 				"label": _("Item Code"),
 				"fieldname": "item_code",
-				"fieldtype": "Link",
-				"options": "Item",
+				"fieldtype": "Data",
 				"width": 150,
 			},
 			{
@@ -22,28 +26,22 @@ def execute(filters=None):
 				"width": 300,
 			},
 			{
-				"label": _("Stock UOM"),
-				"fieldname": "stock_uom",
-				"fieldtype": "Data",
-				"width": 110,
-			},
-			{
-				"label": _("Warehouse"),
-				"fieldname": "warehouse",
-				"fieldtype": "Link",
-				"options": "Warehouse",
-				"width": 200,
-			},{
 				"label": _("Safety Stock"),
 				"fieldname": "safety_stock",
-				"fieldtype": "Float",
+				"fieldtype": "Data",
 				"width": 150
 			},
 			{
 				"label": _("Actual Qty"),
 				"fieldname": "actual_qty",
-				"fieldtype": "Float",
+				"fieldtype": "Data",
 				"width": 150
+			},
+			{
+				"label": _("Stock UOM"),
+				"fieldname": "stock_uom",
+				"fieldtype": "Data",
+				"width": 110,
 			}]
 	items = frappe.db.sql("""
 		SELECT
@@ -67,10 +65,10 @@ def execute(filters=None):
 				data.append({
 					"item_code": row.item_code,
 					"item_name": row.item_name,
-					"stock_uom": row.stock_uom,
 					"warehouse": row.warehouse,
 					"actual_qty": row.actual_qty,
-					"safety_stock": row.safety_stock
+					"safety_stock": row.safety_stock,
+					"stock_uom": row.stock_uom
 				})
 
 	return columns, data
