@@ -1,0 +1,38 @@
+{
+ "add_total_row": 1,
+ "add_translate_data": 0,
+ "columns": [],
+ "creation": "2025-11-27 10:33:28.912892",
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [],
+ "idx": 0,
+ "is_standard": "Yes",
+ "letter_head": "RP Default Letterhead",
+ "letterhead": null,
+ "modified": "2025-11-27 10:38:33.153366",
+ "modified_by": "Administrator",
+ "module": "Ravi Products x Vintrosys",
+ "name": "Custom Sales Analytics RP",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "ref_doctype": "Sales Order",
+ "report_name": "Custom Sales Analytics RP",
+ "report_type": "Script Report",
+ "roles": [
+  {
+   "role": "Stock User"
+  },
+  {
+   "role": "Maintenance User"
+  },
+  {
+   "role": "Accounts User"
+  },
+  {
+   "role": "Sales Manager"
+  }
+ ],
+ "timeout": 0
+}
