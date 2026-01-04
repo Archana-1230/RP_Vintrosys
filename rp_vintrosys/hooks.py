@@ -243,5 +243,10 @@ app_license = "mit"
 # }
 
 fixtures = [
-    {"dt": "Server Script"}
+    {
+        "dt": "Server Script",
+        "filters": [
+            ["name", "in", ["Salary Slip"]]
+        ]
+    }
 ]
