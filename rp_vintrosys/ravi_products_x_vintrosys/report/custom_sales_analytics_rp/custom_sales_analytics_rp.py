@@ -2,6 +2,7 @@
 # For license information, please see license.txt
 
 # import frappe
+# Fix: Improve item group aggregation for blended finished goods
 
 
 import frappe
